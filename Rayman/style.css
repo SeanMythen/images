@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-width: 700px;
+    min-height: 547px;
+    justify-content: center;
+    align-items: center;
+}
+
+#startScreen {
+    width: 415px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#spinBackground{
+    border: 45px solid black;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 0;
+    width: 700px;
+}
+
+#raymanName {
+    width: 600px;
+    bottom: 200px;
+    transition: .2s;
+    z-index: 1;
+  }
+
+#startButton{
+    position: relative;
+    left: 23px;
+    bottom: 20px;
+    cursor: pointer;
+    transition: .2s;
+    z-index: 2;
+}
+
+#startFist{
+    padding-right: 40px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    animation: fistMove 1.25s infinite;
+    animation-timing-function: ease;
+    transition: .2s;
+}
+
+#startButton:hover #startFist {    
+    visibility: visible;
+    opacity:1;
+}
+
+#S1{
+    position: absolute;
+    right: 41px;
+    top: 0px;
+    animation: startColorChange .5s infinite;
+    animation-timing-function: linear;
+    min-width: 42px;
+    min-height: 47px;
+}
+
+#T2{
+    position: absolute;
+    right: 21px;
+    top: 4px;
+    animation: startColorChange .5s infinite;
+    animation-delay: .1s;
+    animation-timing-function: linear;
+    min-width: 44px;
+    min-height: 42px;
+}
+
+#A3{
+    position: absolute;   
+    right: -5px;
+    top: 2px;
+    animation: startColorChange .5s infinite;
+    animation-delay: .2s;
+    animation-timing-function: linear;
+    min-width: 51px;
+    min-height: 49px;
+}
+
+#R4{
+    position: absolute;
+    right: -21px;
+    top: 1px;
+    animation: startColorChange .5s infinite;
+    animation-delay: .3s;
+    animation-timing-function: linear;
+    min-width: 47px;
+    min-height: 47px;
+}
+
+#T5{
+    position: absolute;
+    right: -45px;
+    top: 0px;
+    animation: startColorChange .5s infinite;
+    animation-delay: .4s;
+    animation-timing-function: linear;
+    min-width: 48px;
+    min-height: 47px;
+}
+
+@keyframes startColorChange {
+    0% {filter: hue-rotate(0deg);}
+    16.66% {filter: hue-rotate(30deg);}
+    33.32% {filter: hue-rotate(60deg) brightness(1.1);}
+    49.98% {filter: hue-rotate(75deg) brightness(1.3);}
+    66.64% {filter: hue-rotate(60deg) brightness(1.1);}
+    83.3% {filter: hue-rotate(30deg);}
+  }
+
+@keyframes fistMove {
+    50% {right: 55px;}
+  }
+
+#chooseAGame{
+    filter: hue-rotate(270deg) brightness(1.2);
+    width: 255px;
+    margin-bottom: 45px;
+    opacity: 1;
+    visibility: visible;
+    transition: .2s;
+    z-index: 3;
+    
+}
+
+.emptyDIV{
+    min-height: 50px;
+    position: relative;
+    align-self: flex-start;
+    margin-bottom: 15px;    
+    opacity: 1;
+    visibility: visible;
+    transition: .2s;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#emptyFist{
+    position: absolute;
+    right: 110px;
+    margin-top: 9px;
+    margin-right: 15px;
+    visibility: hidden;
+    opacity: 0;
+    animation: emptyFistMove 1.25s infinite;
+    animation-timing-function: ease;
+    transition: .2s;
+    height: 100%;
+}
+
+@keyframes emptyFistMove {
+    50% {right: 125px;}
+  }
+
+.empty{
+    width: 123px;
+    filter: hue-rotate(75deg) brightness(1.3);
+}
+
+.emptyDIV:hover #emptyFist {
+    visibility: visible;
+    opacity:1;
+}
+
+#smallStartFist{    
+    position: absolute;
+    left: 38px;
+    top: 10px;
+    margin-top: 10px;
+    margin-right: 15px;
+    visibility: hidden;
+    opacity: 0;
+    animation: smallStartFistMove 1.25s infinite;
+    animation-timing-function: ease;
+    transition: .2s;
+    height: 100%;
+}
+
+
+@keyframes smallStartFistMove {
+    50% {left: 23px;}
+  }
+
+
+.smallStartDIV:hover #smallStartFist {
+    visibility: visible;
+    opacity:1;
+}
+
+.smallStartDIV{
+    position: relative;
+    margin-bottom: 15px;    
+    transition: .2s;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#smallStart{
+    position: absolute;
+    left: 60px;
+    filter: hue-rotate(170deg) brightness(1.4);
+    margin-top: 15px;
+    width: 84px;
+    opacity: 1;
+    visibility: visible;
+    transition: .2s;
+    z-index: 3;
+}
+
+.pageTwoReturnDIV{
+    position: relative;
+    margin-bottom: 13px;    
+    transition: .2s;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#pageTwoReturn{
+    position: absolute;
+    right: 60px;
+    filter: hue-rotate(170deg) brightness(1.4);
+    margin-top: 30px;
+    width: 91px;
+    opacity: 1;
+    visibility: visible;
+    transition: .2s;
+    z-index: 3;
+}
+
+
+#smallReturnFist{    
+    position: absolute;
+    right: 137px;
+    top: 23px;
+    margin-top: 10px;
+    margin-right: 15px;
+    visibility: hidden;
+    opacity: 0;
+    animation: smallReturnFistMove 1.25s infinite;
+    animation-timing-function: ease;
+    transition: .2s;
+    height: 100%;
+}
+
+
+@keyframes smallReturnFistMove {
+    50% {right: 152px;}
+  }
+
+.pageTwoReturnDIV:hover #smallReturnFist {
+    visibility: visible;
+    opacity:1;
+}
+
+#empty1 > #letterTest {
+    margin-bottom: 6px;
+    width: 31px;
+}
+
+#letter1_1, #letter1_2, #letter1_3, #letter2_1, #letter2_2, #letter2_3, #letter3_1, #letter3_2, #letter3_3{
+    min-height: 36px;
+    min-width: 31px;
+}
+
+#audioToggle{
+    position: absolute;
+    z-index: 3;
+    top: 200px;
+}
+
+#image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8, #image9, #image10, #image11, #image12, #image13, #image14{
+    overflow: hidden;
+    z-index: 2;
+}
